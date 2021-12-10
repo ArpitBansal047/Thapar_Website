@@ -1,0 +1,492 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+
+    align-items: center;
+    /* display: flex; */
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+}
+
+
+
+nav{
+    position: fixed;
+    background-color: white;
+    border-bottom: 0.2em solid black;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    margin-top: 0px;
+    justify-content: center;
+    z-index: 10;
+}
+
+.navbar{
+    background-color: black;
+    color: white;
+    width: 650px;
+    display: flex;
+    margin: auto;
+    height: 100%;
+    justify-content: center;
+  
+}
+
+
+
+
+.navbar ul{
+    list-style: none;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+
+}
+
+.navbar ul li{
+    padding: 0.2em;
+    color: white;
+    margin:0 0.1em 0 0.1em;
+    
+}
+
+
+
+.navbar ul li a{
+    color: white;
+    text-decoration: none;
+    
+    font-size: 1.2em;
+    padding: 0.15em 1.3em 0.15em 1.0em;
+   
+}
+
+
+
+.navbar ul li a:hover{
+    color: dodgerblue;
+    cursor: pointer;
+    /* transform: scale(); */
+}
+
+.navbar img{
+    font-size: 5em;
+    /* padding-right:-0.5em ; */
+    /* margin-top: 0px;
+    margin-right: ; */
+
+}
+
+.navbar-icon ul{
+    display: none;
+}
+
+button{
+
+    font-size: 1.8em;
+    margin: 0.35em 0.7em 0.35em 0.7em;
+    background-color: white;
+    border: 0;
+}
+
+button:hover{
+    cursor: pointer;
+    /* transform: scale(1.1); */
+}
+
+.account-btn{
+    margin-left: 1.45em;
+
+}
+
+nav input.show-bar{
+    visibility: visible;
+}
+
+
+nav input{
+    /* transition: ease-in 0.3s; */
+    display: none;
+   position: fixed;
+    width: 14em;
+    border-radius: 1em;
+    /* right: 100px; */
+    height: 3em;
+    right: 7.8em;
+    top: 0.4em;
+    /* animation: myanim; */
+   
+    /* margin:10px 0px 10px 0px; */
+  
+    
+}
+
+/* .rem-search{
+    visibility: hidden;
+} */
+
+
+.search-cross{
+    /* transform: translateY(-400%); */
+   visibility: hidden;
+   /* display: none; */
+   
+    
+    
+}
+
+.show-cross{
+   
+    visibility:visible;
+    position:absolute;
+    right: 5.5em;
+    top: 0.75em;
+    margin: 0;
+    font-size: 0.7em;
+    z-index: 5;
+    cursor: pointer;
+    
+}
+
+.menu-btn{
+    margin-right: 1.45em;
+    /* right: 0; */
+
+}
+
+.close-btn{
+    top: 0.2em;
+    right: 0.4em;
+    font-size: 1.85em;
+    background-color: transparent;
+    color: white;
+    position: fixed;
+
+}
+
+/* menu overlay */
+
+.menu{
+    
+    position:fixed;
+    display: flex;
+    flex-direction: column;
+	height:100%;
+	width:100%;
+	background:#333;
+    color: white;
+	overflow:scroll;
+	z-index:99;
+    /* display: none; */
+    visibility: hidden;
+    justify-content: center;
+    overflow: auto;
+    
+}
+
+
+
+.menu.show-menu{
+    /* display: flex; */
+    visibility: visible;
+}
+
+.menu-nav{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    top: 0;
+    margin: 7em 0 1em 0;
+    justify-content: center;
+    /* overflow: scroll; */
+    /* background-color: pink; */
+    /* border-bottom: 0.02em groove white; */
+    height: 85%;
+    width: 100vw;
+    padding: 0.5em;
+   
+    
+}
+
+
+.menu-nav li{
+    top: 5px;
+    padding: 0.5em;
+    margin: 0em 0.5em auto 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    /* background-color: palevioletred; */
+}
+
+
+
+.menu-nav li ul{
+   
+    display: flex;
+    flex-direction:column;
+    margin: auto 0.5em auto 0;
+    padding-top: 1em;
+    /* padding: 0.5em; */
+    justify-content: center;
+    /* align-items: center; */
+
+}
+
+.menu-nav li a{
+    top: 0;
+    font-size: 1.5em;
+    color: dodgerblue;
+    display: flex;
+    margin: auto;
+    transition-property:all .2s linear 0s;
+	-moz-transition:all .2s linear 0s;
+	-webkit-transition:all .2s linear 0s;
+	-o-transition:all .2s linear 0s;
+    justify-content: center;
+    text-decoration: none;
+    
+ }
+   
+ .menu-nav li ul li a:hover{
+     transform: scale(1.1);
+     color:lightgrey
+ }
+
+
+.menu-nav li ul li a{
+    
+    font-size: 0.9em;
+    color: white;
+    text-decoration: none;
+    padding: 0.8em;
+    text-align: center;
+    /* padding-top: 0.2; */
+    /* margin-top: 2em; */
+}
+
+
+
+/* Social icon */
+
+.social{
+    border-top: 0.02em groove white;
+    display:flex;
+    justify-content: center;
+    margin: 1em auto;
+    opacity: 1;
+    z-index: 5;
+    /* height: 15vh; */
+    background: #333;
+    /* position: fixed; */
+    bottom: 100px;
+    align-self: center;
+    width: 100vw;
+}
+
+.social-back{
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    margin: 1.5em 0.5em 0.5em 0.5em;
+    border-radius: 0.1em;
+    background-color: white;
+    padding: 0.6em;
+    width: 2.6em;
+    height:1.6em;
+    justify-content: center;
+    align-items: center;
+    /* color: dodgerblue; */
+    font-size: 2em;
+  
+}
+
+.social-back a{
+    /* margin: auto; */
+    text-decoration: none;
+    color: black;
+}
+
+.location{
+    font-size: 1.em;
+    display: flex;
+    /* margin: 0.7em ; */
+    margin-bottom:3em ;
+    /* position: fixed; */
+    width: 100vw;
+    color: dodgerblue;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media screen and (max-width:900px){
+    /* disabling text navbar */
+    .navbar{
+        display:none;
+    }
+
+    /* common nav */
+    nav{
+        position: absolute;
+        background-color: white;
+        border-bottom: 0.15em solid black;
+        width: 100%;
+        height:3.2em;
+        display: flex;
+        /* margin-top: 0px; */
+        /* margin-left:1em ; */
+        /* margin-right: 1em; */
+        justify-content: center;
+    }
+
+
+    /* icon navbar */
+    .navbar-icon{
+        background-color: black;
+        color: white; 
+        width: 350px; 
+        display: flex;
+        margin: auto;
+        height: 100%;
+        justify-content: center; 
+        align-items: center;
+        
+      
+    }
+    
+    .navbar-icon ul{
+        display:flex;
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+        /* margin:auto; */
+        /* background-color: pink; */
+    }
+    
+    .navbar-icon ul li{
+        padding: 0.5em;
+        color: white;
+        margin:0.1em 0.2em 0.1em 0.2em;
+        /* background-color: pink; */
+        font-size: 25px;
+        
+    }
+    
+    .navbar-icon ul li a{
+        color: white;
+        text-decoration: none;
+        
+        
+        padding: 0;
+       
+    } 
+
+    .navbar-icon ul li a:hover{
+        color: dodgerblue;
+        cursor: pointer;
+        /* transform: scale(); */
+    }
+    
+    /* buttons nav */
+    button{
+
+        font-size: 25px;
+        margin: 0.2em 0.5em 0.2em 0.5em;
+        background-color: white;
+        border: 0;
+    }
+    
+    button:hover{
+        cursor: pointer;
+        /* transform: scale(1.1); */
+    }
+
+    /* .menu-nav li{
+        flex-basis: calc(50% - 12px);
+    } */
+
+}
+
+@media screen and (max-width:600px){
+    
+  
+    .navbar-icon{
+        display:none;
+    }
+
+    .menu-nav li{
+        flex-basis: 100%;
+    }
+    
+    .menu-nav li .head{
+        margin-top: 30px;
+    }
+
+    .social{
+        border-top: 0.02em groove white;
+        display:flex;
+        justify-content: center;
+        margin: 1em auto;
+        /* opacity: 1; */
+        z-index: 5;
+        /* height: 15vh; */
+        background: #333;
+        position: fixed;
+        bottom: 50px;
+        /* align-self: center; */
+        width: 100vw;
+    }
+    
+    .social-back{
+        opacity: 1;
+        display: flex;
+        flex-direction: row;
+        margin: 1.5em 0.5em 0.5em 0.5em;
+        border-radius: 0.1em;
+        background-color: white;
+        padding: 0.6em;
+        width: 2.6em;
+        height:1.6em;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+    
+      
+    }
+    
+    .social-back a{
+        /* margin: auto; */
+        text-decoration: none;
+        color: black;
+    }
+    
+    .location{
+        font-size: 1.em;
+        display: flex;
+        /* margin: 0.7em ; */
+        margin-bottom:3em ;
+        position: fixed;
+        bottom: 50px;
+        width: 100vw;
+        color: dodgerblue;
+        bottom: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    }

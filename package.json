@@ -1,0 +1,28 @@
+{
+  "name": "my_thapar_app",
+  "version": "1.0.0",
+  "description": "Thapar Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArpitBansal047/thapar_app.git"
+  },
+  "author": "Arpit Bansal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArpitBansal047/thapar_app/issues"
+  },
+  "homepage": "https://github.com/ArpitBansal047/thapar_app#readme",
+  "dependencies": {
+    "bad-words": "^3.0.0",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12",
+    "path": "^0.12.7",
+    "socket.io": "^4.3.2"
+  }
+}
